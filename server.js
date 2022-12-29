@@ -24,11 +24,11 @@ if (process.env.NODE_ENV == 'production') {
             }
         )
     })
-}else{
+} else {
     app.use(express.static(__dirname + '/public'));
-app.get('/', (req, res) => {
-    res.sendFile(__dirname + '/index.html');
-})
+    app.get('/', (req, res) => {
+        res.sendFile(__dirname + '/index.html');
+    })
 }
 
 //-socket setUp in server.js-//
